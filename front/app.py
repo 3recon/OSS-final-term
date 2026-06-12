@@ -21,7 +21,6 @@ if "last_selections" not in st.session_state:
     st.session_state.last_selections = None
 
 st.title("경주 여행 장소 추천")
-st.caption("여행 스타일을 고르면 FastAPI가 추천하고, 마음에 드는 장소는 최종 여행 계획에 담을 수 있습니다.")
 
 input_col, result_col = st.columns([0.95, 1.25], gap="large")
 
