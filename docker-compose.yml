@@ -1,0 +1,16 @@
+name: gyeongju-travel
+
+services:
+  back:
+    build: ./back
+    ports:
+      - "8000:8000"
+
+  front:
+    build: ./front
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://back:8000
+    depends_on:
+      - back
