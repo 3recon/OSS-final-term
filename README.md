@@ -7,6 +7,8 @@ Streamlit 프론트엔드와 FastAPI 백엔드를 연결한 경주 여행 장소
 - 여행 목적, 동행 유형, 선호 분위기, 여행 시간대 입력
 - FastAPI `/recommend` API 호출
 - 추천 장소, 추천 이유, 방문 팁 출력
+- 추천 장소를 최종 여행 계획에 적용 또는 취소
+- 최종 여행 계획 목록 확인 및 개별 장소 삭제
 - Docker Compose로 Streamlit과 FastAPI 동시 실행
 
 ## 실행 방법
