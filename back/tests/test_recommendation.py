@@ -52,6 +52,18 @@ class RecommendationTest(unittest.TestCase):
 
         self.assertGreaterEqual(len(places), 9)
 
+    def test_mood_and_time_change_result_with_same_purpose_and_companion(self):
+        requests = [
+            RecommendationRequest("가족 여행", "친구", "감성적인", "저녁"),
+            RecommendationRequest("가족 여행", "친구", "활기찬", "오후"),
+            RecommendationRequest("가족 여행", "친구", "조용한", "오전"),
+            RecommendationRequest("가족 여행", "친구", "활기찬", "야간"),
+        ]
+
+        places = [recommend_place(request).place for request in requests]
+
+        self.assertGreaterEqual(len(set(places)), 3)
+
 
 if __name__ == "__main__":
     unittest.main()
